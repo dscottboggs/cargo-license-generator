@@ -13,5 +13,7 @@ jobs:
         with:
           rust-version: ${{ matrix.rust }}
       - uses: actions/checkout@v2
+      - name: Clippy checks
+        run: cargo clippy --verbose
       - name: Run tests
         run: cargo test --verbose

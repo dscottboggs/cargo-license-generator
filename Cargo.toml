@@ -1,13 +1,13 @@
 [package]
-name = "license-generator"
-description = "A Command line tool that generate `LICENSE` file."
-keywords = ["license","generator", "cli"]
+name = "cargo-generate-license"
+description = "A cargo subcommand that generates `LICENSE` files."
+keywords = ["license","generator", "cli", "generate"]
 readme = "README.md"
 license = "MIT"
-repository = "https://github.com/azu/license-generator"
+repository = "https://github.com/dscottboggs/cargo-license-generator"
 version = "1.0.0"
-authors = ["azu <azuciao@gmail.com>"]
-edition = "2018"
+authors = ["azu <azuciao@gmail.com>", "Scott Boggs <scott+cargo@tams.tech>"]
+edition = "2021"
 include = [
     "files/**/*",
     "src/**/*",
@@ -15,6 +15,7 @@ include = [
     "README.md",
     "LICENSE"
 ]
+
 [dependencies]
 structopt = "0.2.14"
 chrono = "0.4"

@@ -1,36 +1,45 @@
-# license-generator [![Test](https://github.com/azu/license-generator/actions/workflows/test.yml/badge.svg)](https://github.com/azu/license-generator/actions/workflows/test.yml)
+# cargo generate-license [![Test](https://github.com/dscottboggs/cargo-generate-license/actions/workflows/test.yml/badge.svg)](https://github.com/dscottboggs/cargo-generate-license/actions/workflows/test.yml)
 
-A Command line tool that generates `LICENSE` file.
+A cargo subcommand that generates `LICENSE` files.
+
+This is a fork of [Azo's `license-generator`](https://github.com/azu/license-generator).
+I've only tweaked some minor things. The reason for this fork is because I
+wanted to have the command be namespaced under `cargo` rather than standing on
+its own. All credit to them for creating the original project.
 
 ## Installation
 
 Install with [Cargo](https://crates.io/):
 
-    cargo install license-generator
+~~~console
+cargo install cargo-generate-license
+~~~
 
 ## Usage
 
-    $ license-generator --author <name> [LICENSE_TYPE]
+~~~
+$ cargo generate-license --author <name> [LICENSE_TYPE]
 
-    [LICENSE_TYPE]:
-    - AGPL
-    - Apache
-    - CC-BY
-    - CC-BY-NC
-    - CC-BY-NC-SA
-    - CC-BY-SA
-    - CC0
-    - GPL
-    - LGPL
-    - MIT
-    - MPL
-    - Unlicense
+[LICENSE_TYPE]:
+- AGPL
+- Apache
+- CC-BY
+- CC-BY-NC
+- CC-BY-NC-SA
+- CC-BY-SA
+- CC0
+- GPL
+- LGPL
+- MIT
+- MPL
+- Unlicense
 
-    Options:
-      --author input author name. Default: `GitName <GitEmail>`
-      --project input project name that is required by some license
-      --year input license year
-      --output path to the output. Default: ./LICENSE
+Options:
+  --author input author name. Default: `GitName <GitEmail>`
+  --project input project name that is required by some license
+  --year input license year
+  --output path to the output. Default: ./LICENSE
+~~~
 
 ## Supported Licenses
 
@@ -53,15 +62,20 @@ This CLI supports the following licenses:
 
 ### Generate MIT LICENSE
 
-    license-generator MIT --author "azu"
+~~~
+cargo generate-license MIT --author "azu"
+~~~
 
 ### Output to stdout
 
-    license-generator MIT --output /dev/stdout --author "azu"
+~~~
+cargo generate-license MIT --output /dev/stdout --author "azu"
+~~~
 
 ### Multi LICENSE
+Author can be retrieved from `git config`.
 
-    license-generator MIT Apache --author "azu"
+    cargo generate-license MIT Apache
     # output
     # LICENSE-MIT and LICENSE-APACHE
 
@@ -85,4 +99,4 @@ Use [cargo-release](https://github.com/sunng87/cargo-release).
 
 ## License
 
-MIT © azu
+MIT © azu, D. Scott Boggs, 2023

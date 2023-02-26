@@ -1,11 +1,8 @@
-extern crate chrono;
-
 use chrono::Datelike;
 use chrono::Local;
 use structopt::StructOpt;
 
-use license_generator::create_license;
-use license_generator::write_license;
+use cargo_generate_license::{create_license, write_license};
 use std::env;
 use std::process::{self, Command};
 
@@ -35,10 +32,10 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
         author
     } else {
         let name = Command::new("git")
-            .args(&["config", "--get", "user.name"])
+            .args(["config", "--get", "user.name"])
             .output()?;
         let email = Command::new("git")
-            .args(&["config", "--get", "user.email"])
+            .args(["config", "--get", "user.email"])
             .output()?;
         format!(
             "{} <{}>",
