@@ -54,6 +54,7 @@ name = "cargo-generate-license"
 version = "1.0.0"
 dependencies = [
  "chrono",
+ "derive_license",
  "structopt",
 ]
 
@@ -155,6 +156,14 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "086c685979a698443656e5cf7856c95c642295a38599f12fb1ff76fb28d19892"
 dependencies = [
  "proc-macro2 1.0.51",
+ "quote 1.0.23",
+ "syn 1.0.109",
+]
+
+[[package]]
+name = "derive_license"
+version = "0.1.0"
+dependencies = [
  "quote 1.0.23",
  "syn 1.0.109",
 ]
