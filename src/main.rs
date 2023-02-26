@@ -21,7 +21,11 @@ struct Opt {
 }
 
 fn main() -> Result<(), Box<dyn std::error::Error>> {
-    let opt = Opt::from_args();
+    let mut args: Vec<_> = env::args().collect();
+    if args.get(1) == Some(&"generate-license".into()) {
+        args.remove(1);
+    }
+    let opt = Opt::from_iter(args);
     let year = if let Some(year) = opt.year {
         year
     } else {
