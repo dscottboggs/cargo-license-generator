@@ -20,5 +20,6 @@ include = [
 structopt = "0.2.14"
 chrono = "0.4"
 
-[dependencies.derive_license]
-path = "./derive_license"
+[dependencies.cargo-generate-license_impl-license]
+# path = "./derive_license"
+version = "0.1.0"

@@ -1,4 +1,4 @@
-use derive_license::impl_license;
+use cargo_generate_license_derive_license::impl_license;
 
 pub trait License {
     fn notice(&self, year: u32, name: &str, project: &str) -> String;

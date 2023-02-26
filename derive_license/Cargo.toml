@@ -1,5 +1,5 @@
 [package]
-name = "derive_license"
+name = "cargo-generate-license_impl-license"
 version = "0.1.0"
 edition = "2021"
 
