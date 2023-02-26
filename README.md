@@ -1,4 +1,4 @@
-# cargo generate-license [![Test](https://github.com/dscottboggs/cargo-generate-license/actions/workflows/test.yml/badge.svg)](https://github.com/dscottboggs/cargo-generate-license/actions/workflows/test.yml)
+# cargo generate-license [![Test](https://github.com/dscottboggs/cargo-license-generator/actions/workflows/test.yml/badge.svg)](https://github.com/dscottboggs/cargo-license-generator/actions/workflows/test.yml)
 
 A cargo subcommand that generates `LICENSE` files.
 
