@@ -2,6 +2,8 @@
 name = "cargo-generate-license_impl-license"
 version = "0.1.0"
 edition = "2021"
+description = "a proc macro for use in cargo-generate-license"
+license = "LGPL-3"
 
 [lib]
 proc_macro = true
